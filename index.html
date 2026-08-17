@@ -101,6 +101,8 @@
       align-items:center;
     }
     .contract-value{
+      user-select:text;
+      -webkit-user-select:text;
       flex:1 1 260px;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -230,7 +232,935 @@
       }
     }
 
-  </style>
+  
+    /* ===== MINEOW PRO V3 — CLEAN MOBILE POLISH ===== */
+    :root{
+      --gold:#f5b82e;
+      --gold2:#ffd86b;
+      --dark:#080603;
+      --panel:rgba(10,7,3,.80);
+      --line:rgba(255,195,55,.24);
+      --text:#fff8df;
+      --muted:#cdbf98;
+    }
+
+    body{
+      background:#050402;
+    }
+
+    .nav{
+      background:rgba(6,4,2,.82);
+      border-bottom:1px solid rgba(255,196,65,.18);
+      box-shadow:0 8px 28px rgba(0,0,0,.22);
+    }
+
+    .brand img{
+      border:1px solid rgba(255,208,99,.25);
+    }
+
+    .mini{
+      border-color:rgba(255,202,77,.20);
+      background:rgba(12,8,3,.80);
+    }
+
+    .mini.buy{
+      background:linear-gradient(135deg,#ffd96c,#eaa124);
+      color:#1d1203;
+    }
+
+    .hero{
+      padding:54px 0 70px;
+    }
+
+    .hero-grid{
+      gap:34px;
+    }
+
+    .hero-logo img{
+      width:min(400px,88vw);
+      box-shadow:
+        0 24px 60px rgba(0,0,0,.48),
+        0 0 34px rgba(255,179,0,.12);
+    }
+
+    .eyebrow{
+      background:rgba(6,4,2,.62);
+      border-color:rgba(255,205,83,.24);
+      color:#f6d56c;
+    }
+
+    h1{
+      letter-spacing:-2px;
+      text-shadow:0 8px 28px rgba(0,0,0,.46);
+    }
+
+    .lead{
+      color:#eadfbe;
+    }
+
+    .btn{
+      border-color:rgba(255,204,83,.22);
+      background:rgba(12,8,3,.82);
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,#ffd96c,#eaa124);
+      color:#1d1203;
+    }
+
+    .glass{
+      background:linear-gradient(180deg,rgba(15,10,4,.82),rgba(7,5,2,.78));
+      border-color:rgba(255,199,65,.18);
+      box-shadow:0 18px 44px rgba(0,0,0,.24);
+    }
+
+    .story,
+    .card,
+    .buy-panel,
+    .road,
+    .cta{
+      border-radius:20px;
+    }
+
+    .kicker{
+      color:#eeb84a;
+    }
+
+    .contract-value{
+      background:rgba(0,0,0,.34);
+      border-color:rgba(255,202,75,.22);
+    }
+
+    @media (max-width:860px){
+      .wrap{
+        width:calc(100% - 28px);
+      }
+
+      .navin{
+        height:66px;
+        gap:8px;
+      }
+
+      .brand{
+        gap:8px;
+      }
+
+      .brand img{
+        width:40px;
+        height:40px;
+      }
+
+      .brand span{
+        font-size:12px;
+        line-height:1.15;
+        max-width:100px;
+        white-space:normal;
+      }
+
+      .nav-actions{
+        gap:5px;
+      }
+
+      .mini{
+        padding:7px 9px;
+        font-size:11px;
+        min-height:34px;
+        border-radius:10px;
+      }
+
+      .hero{
+        padding:34px 0 58px;
+      }
+
+      .hero-grid{
+        grid-template-columns:1fr;
+        gap:24px;
+        text-align:center;
+      }
+
+      .hero-logo{
+        order:-1;
+      }
+
+      .hero-logo img{
+        width:min(315px,78vw);
+      }
+
+      .lead{
+        max-width:560px;
+        margin-inline:auto;
+        font-size:16px;
+        line-height:1.62;
+      }
+
+      .actions{
+        justify-content:center;
+        gap:9px;
+      }
+
+      .actions .btn{
+        flex:0 1 auto;
+        min-width:150px;
+        min-height:44px;
+        padding:0 14px;
+        font-size:13px;
+      }
+
+      h1{
+        font-size:clamp(42px,12vw,58px);
+        line-height:.96;
+        letter-spacing:-1.5px;
+        margin:16px 0;
+      }
+
+      .eyebrow{
+        font-size:10px;
+        padding:8px 11px;
+      }
+
+      section{
+        padding:58px 0;
+      }
+
+      .section-head{
+        margin-bottom:22px;
+      }
+
+      h2{
+        font-size:clamp(32px,9vw,44px);
+      }
+
+      .story{
+        grid-template-columns:1fr;
+        padding:22px;
+        gap:16px;
+      }
+
+      .story p{
+        font-size:15px;
+        line-height:1.7;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        padding:20px;
+      }
+
+      .token-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .stat{
+        padding:18px 12px;
+      }
+
+      .stat strong{
+        font-size:18px;
+      }
+
+      .buy-panel{
+        grid-template-columns:1fr;
+        padding:22px;
+      }
+
+      .buy-actions{
+        justify-content:flex-start;
+      }
+
+      .road{
+        grid-template-columns:1fr;
+        gap:6px;
+        padding:20px;
+      }
+
+      .cta{
+        padding:28px 22px;
+      }
+    }
+
+    @media (max-width:520px){
+      .nav-actions .mini{
+        padding:7px 8px;
+      }
+
+      .hero-logo img{
+        width:min(290px,76vw);
+      }
+
+      .actions{
+        display:grid;
+        grid-template-columns:1fr;
+        width:min(330px,100%);
+        margin:24px auto 0;
+      }
+
+      .actions .btn{
+        width:100%;
+      }
+
+      .token-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .buy-actions{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+
+      .buy-actions .btn{
+        width:100%;
+      }
+    }
+
+  
+    #official-contract{scroll-margin-top:92px}
+    #contractValue{
+      cursor:pointer;
+      user-select:all;
+      -webkit-user-select:all;
+      white-space:normal;
+      overflow-wrap:anywhere;
+      word-break:break-all;
+      color:#ffe6a3;
+    }
+    .contract-btn{color:#f8e3b2}
+
+
+    /* ===== Balanced hero action buttons ===== */
+    @media (max-width:520px){
+      .actions{
+        width:min(360px,100%);
+        margin:24px auto 0;
+        gap:10px;
+      }
+
+      .actions .btn{
+        width:100%;
+        min-height:50px;
+        padding:0 18px;
+        font-size:15px;
+        font-weight:800;
+        line-height:1;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        border-radius:14px;
+      }
+
+      .actions .btn.primary{
+        letter-spacing:.1px;
+      }
+
+      .actions a[href*="x.com"]{
+        font-size:15px;
+        font-weight:800;
+      }
+
+      .actions button[onclick*="copyContract"]{
+        font-size:15px;
+        font-weight:800;
+        color:#f7e6bb;
+      }
+    }
+
+
+
+    /* ===== MINEOW PRO V4 — PROFESSIONAL RESPONSIVE POLISH ===== */
+    :root{
+      --gold:#f3bb3f;
+      --gold2:#ffd979;
+      --gold3:#fff0bc;
+      --green:#47d16c;
+      --greenbg:rgba(71,209,108,.14);
+    }
+
+    body{
+      color:#f9f2dc;
+    }
+
+    .wrap{
+      width:min(1180px, calc(100% - 32px));
+    }
+
+    .nav{
+      background:linear-gradient(180deg, rgba(7,4,2,.90), rgba(7,4,2,.76));
+      border-bottom:1px solid rgba(255,206,100,.16);
+      box-shadow:0 12px 30px rgba(0,0,0,.26);
+    }
+
+    .navin{
+      height:74px;
+    }
+
+    .brand{
+      gap:12px;
+    }
+
+    .brand img{
+      width:46px;
+      height:46px;
+      border:1px solid rgba(255,213,112,.22);
+      box-shadow:0 0 0 1px rgba(255,214,109,.12), 0 10px 25px rgba(0,0,0,.26);
+    }
+
+    .brand span{
+      display:flex;
+      flex-direction:column;
+      line-height:1.02;
+      font-size:15px;
+      letter-spacing:.2px;
+    }
+
+    .nav-actions{
+      gap:10px;
+    }
+
+    .mini{
+      min-height:40px;
+      min-width:92px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,205,88,.18);
+      background:linear-gradient(180deg, rgba(18,12,5,.82), rgba(10,7,3,.9));
+      color:#f5dfac;
+      box-shadow:0 8px 18px rgba(0,0,0,.18);
+    }
+
+    .mini.buy{
+      border:none;
+      background:linear-gradient(135deg,#ffe082 0%, #f6bc3b 54%, #db8d00 100%);
+      color:#211300;
+      box-shadow:0 10px 24px rgba(240,174,0,.22);
+    }
+
+    .hero{
+      min-height:auto;
+      padding:68px 0 82px;
+    }
+
+    .hero-grid{
+      grid-template-columns:minmax(0,1.02fr) minmax(300px,.98fr);
+      gap:54px;
+      align-items:center;
+    }
+
+    .hero > .wrap{
+      position:relative;
+    }
+
+    .hero > .wrap::before{
+      content:"";
+      position:absolute;
+      inset:-18px;
+      border-radius:34px;
+      background:linear-gradient(180deg, rgba(17,10,3,.22), rgba(8,5,2,.02));
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .eyebrow{
+      padding:10px 14px;
+      font-size:12px;
+      letter-spacing:.7px;
+      color:#f7de98;
+      background:rgba(9,6,2,.54);
+      border:1px solid rgba(255,204,92,.22);
+      box-shadow:0 10px 30px rgba(0,0,0,.16);
+    }
+
+    h1{
+      margin:20px 0 18px;
+      line-height:.92;
+      text-shadow:0 18px 36px rgba(0,0,0,.34);
+    }
+
+    .gold{
+      color:#ffd45a;
+      text-shadow:0 12px 30px rgba(255,174,0,.15);
+    }
+
+    .lead{
+      max-width:600px;
+      font-size:20px;
+      line-height:1.72;
+      color:#eee1ba;
+      margin:0;
+    }
+
+    .actions{
+      margin-top:32px;
+      gap:14px;
+    }
+
+    .btn{
+      min-height:52px;
+      padding:0 22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      font-weight:900;
+      border-radius:16px;
+      border:1px solid rgba(255,204,91,.18);
+      background:linear-gradient(180deg, rgba(17,11,4,.84), rgba(8,5,2,.92));
+      color:#f8e7b8;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .btn:hover,
+    .mini:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 28px rgba(0,0,0,.25);
+      border-color:rgba(255,214,121,.32);
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,#ffe082 0%, #f7c347 52%, #dd9307 100%);
+      color:#201100;
+      border:none;
+      box-shadow:0 16px 30px rgba(243,171,0,.24);
+    }
+
+    .hero-logo{
+      position:relative;
+    }
+
+    .hero-logo::before{
+      content:"";
+      position:absolute;
+      width:86%;
+      height:86%;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,188,35,.28) 0%, rgba(255,188,35,.08) 38%, transparent 72%);
+      filter:blur(10px);
+      z-index:0;
+    }
+
+    .hero-logo img{
+      position:relative;
+      z-index:1;
+      width:min(430px, 90vw);
+      border-radius:50%;
+      box-shadow:0 0 0 1px rgba(255,210,114,.2), 0 28px 70px rgba(0,0,0,.48), 0 0 60px rgba(255,174,0,.16);
+    }
+
+    section{
+      padding:82px 0;
+    }
+
+    .section-head{
+      margin-bottom:26px;
+    }
+
+    .kicker{
+      color:#f2c050;
+      font-size:12px;
+      letter-spacing:2px;
+    }
+
+    h2{
+      margin:10px 0 12px;
+      line-height:1.05;
+    }
+
+    .muted{
+      color:#cdbf98;
+      font-size:17px;
+      line-height:1.72;
+    }
+
+    .glass{
+      background:linear-gradient(180deg, rgba(16,10,4,.84), rgba(7,5,2,.88));
+      border:1px solid rgba(255,202,76,.14);
+      box-shadow:0 20px 50px rgba(0,0,0,.24);
+      border-radius:24px;
+      overflow:hidden;
+    }
+
+    .story{
+      padding:34px;
+      gap:26px;
+    }
+
+    .story p{
+      font-size:18px;
+      line-height:1.82;
+      color:#eee2bf;
+    }
+
+    .cards,
+    .token-grid,
+    .roadmap{
+      gap:18px;
+    }
+
+    .card,
+    .road,
+    .stat,
+    .buy-panel,
+    .cta{
+      border-radius:22px;
+    }
+
+    .card{
+      padding:24px;
+    }
+
+    .card h3{
+      font-size:22px;
+      margin:0 0 10px;
+    }
+
+    .card p{
+      line-height:1.7;
+    }
+
+    .buy-panel{
+      padding:30px;
+      grid-template-columns:minmax(0,1.1fr) minmax(250px,.9fr);
+      gap:22px;
+      align-items:center;
+    }
+
+    .buy-copy h3{
+      font-size:30px;
+      margin:0 0 10px;
+      color:#ffd874;
+    }
+
+    .buy-copy p{
+      font-size:17px;
+      line-height:1.72;
+    }
+
+    .contract-box{
+      margin-top:16px;
+      gap:10px;
+    }
+
+    .contract-value{
+      min-height:54px;
+      display:flex;
+      align-items:center;
+      padding:14px 16px;
+      background:rgba(0,0,0,.30);
+      border:1px dashed rgba(255,203,85,.28);
+      color:#ffe9af;
+      border-radius:16px;
+    }
+
+    .copy-note{
+      margin-top:10px;
+      color:#bdae89;
+    }
+
+    .buy-actions{
+      align-items:stretch;
+      gap:12px;
+    }
+
+    .buy-actions .btn{
+      min-width:180px;
+      width:100%;
+    }
+
+    .stat{
+      padding:24px 18px;
+    }
+
+    .stat small{
+      font-size:11px;
+      color:#bba87a;
+    }
+
+    .stat strong{
+      margin-top:10px;
+      font-size:24px;
+      line-height:1.35;
+      color:#ffdb79;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+
+    .road{
+      position:relative;
+      padding:24px;
+      grid-template-columns:124px 1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .phase{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:40px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,196,60,.08);
+      border:1px solid rgba(255,196,60,.18);
+      color:#ffcf4d;
+      font-weight:1000;
+      letter-spacing:.3px;
+    }
+
+    .road.done{
+      border-color:rgba(71,209,108,.25);
+      box-shadow:0 20px 50px rgba(0,0,0,.22), inset 0 0 0 1px rgba(71,209,108,.06);
+    }
+
+    .road.done .phase{
+      background:var(--greenbg);
+      border-color:rgba(71,209,108,.24);
+      color:#7df0a0;
+    }
+
+    .road.done::after{
+      content:"Completed";
+      position:absolute;
+      top:18px;
+      right:18px;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:#9cf0b2;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(71,209,108,.12);
+      border:1px solid rgba(71,209,108,.18);
+    }
+
+    .road h3{
+      font-size:24px;
+      margin:0 0 8px;
+    }
+
+    .road p{
+      font-size:16px;
+      line-height:1.7;
+    }
+
+    .cta{
+      padding:42px 34px;
+    }
+
+    .contract{
+      margin-top:10px;
+      max-width:100%;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+      line-height:1.55;
+    }
+
+    footer{
+      padding:36px 0 50px;
+      color:#b09e76;
+      font-size:13px;
+    }
+
+    @media (max-width:980px){
+      .hero-grid,
+      .buy-panel{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:44px 0 68px;
+      }
+
+      .hero-grid{
+        gap:28px;
+        text-align:center;
+      }
+
+      .hero-logo{
+        order:-1;
+      }
+
+      .lead{
+        margin-inline:auto;
+      }
+
+      .actions,
+      .buy-actions{
+        justify-content:center;
+      }
+    }
+
+    @media (max-width:860px){
+      .wrap{
+        width:calc(100% - 24px);
+      }
+
+      .navin{
+        height:68px;
+        gap:8px;
+      }
+
+      .brand img{
+        width:40px;
+        height:40px;
+      }
+
+      .brand span{
+        font-size:12px;
+        max-width:104px;
+      }
+
+      .nav-actions{
+        gap:6px;
+      }
+
+      .mini{
+        min-width:auto;
+        min-height:36px;
+        padding:0 12px;
+        font-size:11px;
+        border-radius:12px;
+      }
+
+      .hero-grid{
+        gap:22px;
+      }
+
+      .hero-logo img{
+        width:min(316px, 78vw);
+      }
+
+      h1{
+        font-size:clamp(42px,12vw,58px);
+        letter-spacing:-1.6px;
+      }
+
+      .lead{
+        font-size:16px;
+        line-height:1.66;
+      }
+
+      .actions{
+        width:min(360px,100%);
+        margin:26px auto 0;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+
+      .actions .btn,
+      .buy-actions .btn{
+        width:100%;
+      }
+
+      section{
+        padding:60px 0;
+      }
+
+      .story{
+        grid-template-columns:1fr;
+        padding:24px;
+      }
+
+      .story p,
+      .muted,
+      .buy-copy p,
+      .road p{
+        font-size:15px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .token-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .stat strong{
+        font-size:18px;
+      }
+
+      .buy-panel{
+        padding:22px;
+      }
+
+      .road{
+        grid-template-columns:1fr;
+        gap:12px;
+        padding:20px;
+      }
+
+      .road.done::after{
+        position:static;
+        display:inline-flex;
+        margin-top:4px;
+        width:max-content;
+      }
+    }
+
+    @media (max-width:520px){
+      .token-grid{
+        grid-template-columns:1fr;
+      }
+
+      .eyebrow{
+        font-size:10px;
+        padding:8px 10px;
+      }
+
+      .hero-logo img{
+        width:min(286px,76vw);
+      }
+
+      .story,
+      .cta{
+        padding:22px;
+      }
+
+      .buy-copy h3{
+        font-size:25px;
+      }
+
+      .contract-value,
+      .contract{
+        font-size:13px;
+      }
+    }
+
+
+    .copy-toast{
+      position:fixed;
+      left:50%;
+      bottom:26px;
+      transform:translate(-50%,18px);
+      z-index:99999;
+      padding:12px 16px;
+      max-width:calc(100% - 28px);
+      border-radius:14px;
+      background:rgba(8,6,3,.96);
+      border:1px solid rgba(255,205,93,.28);
+      color:#ffe8a9;
+      font-weight:800;
+      text-align:center;
+      box-shadow:0 16px 42px rgba(0,0,0,.5);
+      opacity:0;
+      pointer-events:none;
+      transition:.2s ease;
+    }
+    .copy-toast.show{
+      opacity:1;
+      transform:translate(-50%,0);
+    }
+
+</style>
 </head>
 <body>
   <nav class="nav">
@@ -246,9 +1176,9 @@
         <a href="#community">Community</a>
       </div>
       <div class="nav-actions">
-        <a class="mini buy" href="#buy">⛏️ Buy</a>
+        <a class="mini buy" href="#buy">🔎 View</a>
         <a class="mini" href="https://x.com/MINEOW_SOL" target="_blank" rel="noopener">𝕏</a>
-        <button class="mini contract-btn" type="button" onclick="copyContract()">🪙 Contract</button>
+        <button class="mini contract-btn" type="button" onclick="copyContract(this)">Contract</button>
       </div>
     </div>
   </nav>
@@ -264,9 +1194,9 @@
             and one simple belief: the next swing could uncover something legendary.
           </p>
           <div class="actions">
-            <a class="btn primary" href="#buy">⛏️ Buy $MINEOW</a>
+            <a class="btn primary" href="https://gmgn.ai/sol/token/2k7PXtacV1PE1DcDcFQbpSdZ3y1eqKRNSRcJLnxPpump" target="_blank" rel="noopener">🔎 View $MINEOW</a>
             <a class="btn" href="https://x.com/MINEOW_SOL" target="_blank" rel="noopener">𝕏 @MINEOW_SOL</a>
-            <button class="btn" type="button" onclick="copyContract()">🪙 Copy Contract</button>
+            <button class="btn" type="button" onclick="copyContract(this)">Copy Contract</button>
           </div>
         </div>
         <div class="hero-logo">
@@ -315,21 +1245,21 @@
       <div class="wrap">
         <div class="section-head">
           <div class="kicker">Miner Access</div>
-          <h2>Grab your pickaxe.</h2>
-          <p class="muted">Use the official links below when $MINEOW is live.</p>
+          <h2>Explore Miner Cat.</h2>
+          <p class="muted">Use the official links below to view and verify $MINEOW.</p>
         </div>
         <div class="glass buy-panel">
           <div class="buy-copy">
-            <h3>⛏️ Buy Miner Cat</h3>
-            <p>The mine is open. Keep the official contract and social links in one place so miners can verify before trading.</p>
-            <div class="contract-box">
-              <div class="contract-value" id="contractValue">Coming Soon</div>
-              <button class="btn" type="button" onclick="copyContract()">Copy Contract</button>
+            <h3>🔎 View Miner Cat</h3>
+            <p>Keep the official contract and project links in one place so the community can verify $MINEOW.</p>
+            <div class="contract-box" id="official-contract">
+              <div class="contract-value" id="contractValue" role="button" tabindex="0" onclick="copyContract(this)" title="Tap to copy">2k7PXtacV1PE1DcDcFQbpSdZ3y1eqKRNSRcJLnxPpump</div>
+              <button class="btn" type="button" onclick="copyContract(this)">Copy Contract</button>
             </div>
-            <div class="copy-note" id="copyNote">Contract will be updated after token deployment.</div>
+            <div class="copy-note" id="copyNote">Official $MINEOW contract on Solana.</div>
           </div>
           <div class="buy-actions">
-            <a class="btn primary" href="#" id="buyLink">Buy $MINEOW</a>
+            <a class="btn primary" href="https://gmgn.ai/sol/token/2k7PXtacV1PE1DcDcFQbpSdZ3y1eqKRNSRcJLnxPpump" id="buyLink" target="_blank" rel="noopener">View on GMGN</a>
             <a class="btn" href="https://x.com/MINEOW_SOL" target="_blank" rel="noopener">𝕏 @MINEOW_SOL</a>
           </div>
         </div>
@@ -347,7 +1277,7 @@
           <div class="glass stat"><small>Name</small><strong>Miner Cat</strong></div>
           <div class="glass stat"><small>Ticker</small><strong>$MINEOW</strong></div>
           <div class="glass stat"><small>Theme</small><strong>Cat Miner</strong></div>
-          <div class="glass stat"><small>Contract</small><strong>Coming Soon</strong></div>
+          <div class="glass stat"><small>Contract</small><strong>2k7PXtacV1PE1DcDcFQbpSdZ3y1eqKRNSRcJLnxPpump</strong></div>
         </div>
       </div>
     </section>
@@ -359,8 +1289,8 @@
           <h2>The mining plan.</h2>
         </div>
         <div class="roadmap">
-          <div class="glass road"><div class="phase">PHASE 01</div><div><h3>Enter the Mine</h3><p>Brand, logo, website, community channels, and meme identity.</p></div></div>
-          <div class="glass road"><div class="phase">PHASE 02</div><div><h3>First Gold</h3><p>Token launch, trading links, social expansion, and community memes.</p></div></div>
+          <div class="glass road done"><div class="phase">✓ PHASE 01</div><div><h3>Enter the Mine</h3><p>Brand, logo, website, community channels, and meme identity.</p></div></div>
+          <div class="glass road done"><div class="phase">✓ PHASE 02</div><div><h3>First Gold</h3><p>Token launch, trading links, social expansion, and community memes.</p></div></div>
           <div class="glass road"><div class="phase">PHASE 03</div><div><h3>Dig Deeper</h3><p>Community campaigns, partnerships, contests, and ecosystem growth.</p></div></div>
           <div class="glass road"><div class="phase">PHASE 04</div><div><h3>Legendary Mine</h3><p>Long-term brand building and new community-driven Miner Cat ideas.</p></div></div>
         </div>
@@ -373,7 +1303,7 @@
           <div class="kicker">Miner Cat Community</div>
           <h2>One cat. One pickaxe. One endless mine.</h2>
           <p class="muted">Social and trading links can be added here when they are ready.</p>
-          <div class="contract">Contract: Coming Soon</div>
+          <div class="contract">Contract: 2k7PXtacV1PE1DcDcFQbpSdZ3y1eqKRNSRcJLnxPpump</div>
         </div>
       </div>
     </section>
@@ -385,22 +1315,84 @@
     </div>
   </footer>
 
-  <script>
-    const MINER_CAT_CONTRACT = "Coming Soon";
+  
+  
 
-    function copyContract(){
-      const note = document.getElementById("copyNote");
-      if (MINER_CAT_CONTRACT === "Coming Soon") {
-        if (note) note.textContent = "Contract chưa được cập nhật.";
-        return;
-      }
-      navigator.clipboard.writeText(MINER_CAT_CONTRACT).then(() => {
-        if (note) note.textContent = "Đã sao chép contract.";
-      }).catch(() => {
-        if (note) note.textContent = "Không thể sao chép tự động.";
-      });
+
+<script>
+const MINER_CAT_CONTRACT = "2k7PXtacV1PE1DcDcFQbpSdZ3y1eqKRNSRcJLnxPpump";
+
+function showCopyToast(text) {
+  const toast = document.getElementById("copyToast");
+  if (!toast) return;
+  toast.textContent = text;
+  toast.classList.add("show");
+  clearTimeout(window.__mineowToast);
+  window.__mineowToast = setTimeout(() => toast.classList.remove("show"), 1500);
+}
+
+function setCopiedState(btn) {
+  if (!btn) return;
+  const original = btn.dataset.originalText || btn.textContent;
+  btn.dataset.originalText = original;
+  btn.textContent = "✓ Copied";
+  setTimeout(() => btn.textContent = original, 1300);
+}
+
+async function copyContract(btn) {
+  const note = document.getElementById("copyNote");
+
+  // Method 1: standard Clipboard API (works on HTTPS / mineow.space)
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(MINER_CAT_CONTRACT);
+      setCopiedState(btn);
+      showCopyToast("Contract copied ✓");
+      if (note) note.textContent = "Contract copied successfully.";
+      return;
     }
-  </script>
+  } catch (e) {}
 
+  // Method 2: legacy fallback for some Android/local-file browsers
+  try {
+    const area = document.createElement("textarea");
+    area.value = MINER_CAT_CONTRACT;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    area.style.top = "0";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+
+    area.focus();
+    area.select();
+    area.setSelectionRange(0, area.value.length);
+
+    const ok = document.execCommand("copy");
+    document.body.removeChild(area);
+
+    if (ok) {
+      setCopiedState(btn);
+      showCopyToast("Contract copied ✓");
+      if (note) note.textContent = "Contract copied successfully.";
+      return;
+    }
+  } catch (e) {}
+
+  // If the browser blocks clipboard for content:// local previews.
+  const value = document.getElementById("contractValue");
+  if (value) {
+    value.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  showCopyToast("Browser blocked clipboard. Open mineow.space to copy automatically.");
+  if (note) note.textContent = "Local preview blocked clipboard. On HTTPS mineow.space, Copy works automatically.";
+}
+</script>
+
+
+
+
+
+<div id="copyToast" class="copy-toast">Copied ✓</div>
 </body>
 </html>
