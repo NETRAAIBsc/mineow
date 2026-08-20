@@ -2600,6 +2600,21 @@ body::after{
 @media(max-width:560px){
   .p3r-track::after{top:43px;left:8%}
 }
+
+/* V5.4AH TEST PATCH — passed depths stay visibly unlocked */
+.p3r-level.depth-unlocked .p3-vault-svg .lock-shackle{
+  transform-box:fill-box!important;
+  transform-origin:20% 100%!important;
+  transform:translate(-5px,-8px) rotate(-34deg)!important;
+}
+.p3r-level.depth-unlocked .p3-vault-svg{
+  filter:drop-shadow(0 0 14px rgba(255,214,90,.72))!important;
+  opacity:1!important;
+}
+.p3r-level.depth-unlocked .p3r-node::before{
+  border-color:rgba(255,221,121,.92)!important;
+  box-shadow:0 0 24px rgba(255,194,55,.38),inset 0 0 0 6px rgba(255,213,105,.07)!important;
+}
 </style>
 
 
@@ -2618,6 +2633,134 @@ body::after{
 
 
 <!-- V5.4AG: CTA deduplication only; layout/CSS unchanged -->
+
+<style id="mineow-unlocked-cat-consistency">
+/* All unlocked Depth markers use the exact same Miner Cat presentation as the newest unlocked Depth. */
+.p3r-level.depth-unlocked .p3r-cat,
+.p3r-level.current .p3r-cat{
+  background-size:124% !important;
+  background-position:50% 38% !important;
+}
+.p3r-level.depth-unlocked .p3r-cat::after,
+.p3r-level.current .p3r-cat::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-2px;
+  transform:translateX(-50%);
+  width:34px;
+  height:20px;
+  border-radius:18px 18px 0 0;
+  background:linear-gradient(180deg,rgba(13,8,3,.08) 0%,rgba(8,5,2,.82) 48%,rgba(8,5,2,1) 100%);
+  pointer-events:none;
+}
+@media(max-width:560px){
+  .p3r-level.depth-unlocked .p3r-cat,
+  .p3r-level.current .p3r-cat{
+    background-size:124% !important;
+    background-position:50% 38% !important;
+  }
+}
+</style>
+
+
+<style id="mineow-remove-title-rules">
+.p3r-small-rule{display:none !important;}
+</style>
+
+<style id="mineow-depth1-spacing-fix">
+/* DEPTH 1 typography spacing normalization */
+.p3r-signal-copy{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  gap:10px !important;
+  padding:18px 20px !important;
+}
+.p3r-signal-copy .p3r-unlocked{
+  margin:0 !important;
+}
+.p3r-signal-copy h3{
+  margin:0 !important;
+  line-height:1.04 !important;
+}
+.p3r-signal-copy .p3r-small-rule{
+  display:none !important;
+}
+.p3r-signal-copy p{
+  margin:0 !important;
+  line-height:1.55 !important;
+  max-width:42ch;
+}
+@media(max-width:560px){
+  .p3r-signal-copy{
+    gap:9px !important;
+    padding:16px !important;
+  }
+  .p3r-signal-copy h3{
+    line-height:1.06 !important;
+  }
+  .p3r-signal-copy p{
+    line-height:1.5 !important;
+    max-width:none;
+  }
+}
+</style>
+
+<style id="mineow-depth1-heading-spacing">
+/* Depth 1 typography rhythm: keep large gold headings and white copy evenly spaced. */
+.p3r-build-copy h3{
+  margin:5px 0 6px !important;
+  line-height:1.04 !important;
+}
+.p3r-build-copy p{
+  margin:0 !important;
+  line-height:1.58 !important;
+}
+.p3r-signal-copy h3{
+  margin:11px 0 7px !important;
+  line-height:1 !important;
+}
+.p3r-signal-copy p{
+  margin:0 !important;
+  line-height:1.62 !important;
+}
+@media(max-width:560px){
+  .p3r-build-copy h3{margin:4px 0 6px !important;}
+  .p3r-signal-copy h3{margin:9px 0 7px !important;}
+}
+</style>
+
+<style id="mineow-dashboard-cleanup">
+/* Dashboard cleanup: remove redundant current-depth strip and tighten CTA area. */
+.console-contract{display:none!important;}
+.console-actions-clean{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px!important;
+  padding:18px 20px 20px!important;
+  border-top:1px solid rgba(255,205,80,.12);
+  background:linear-gradient(180deg,rgba(10,7,3,.18),rgba(5,4,2,.28));
+}
+.console-actions-clean .btn{
+  width:100%;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  margin:0!important;
+}
+@media(max-width:560px){
+  .console-actions-clean{
+    grid-template-columns:1fr 1fr;
+    gap:10px!important;
+    padding:15px 16px 17px!important;
+  }
+  .console-actions-clean .btn:first-child{grid-column:1/-1;}
+  .console-actions-clean .btn{min-height:44px;}
+}
+</style>
 </head>
 <body>
   <div class="gold-dust" aria-hidden="true"></div>
@@ -2744,11 +2887,7 @@ body::after{
             <div class="console-cell"><small>Supply</small><strong>1,000,000,000</strong><span>MINEOW</span></div>
             <div class="console-cell"><small>Status</small><strong class="live-text">● LIVE</strong><span>Official project</span></div>
           </div>
-          <div class="console-contract">
-            <div><small>CURRENT DEPTH</small><code id="dashboardContract">DEPTH 1 · THE SIGNAL</code></div>
-            <span class="btn console-copy" aria-label="Depth 1 active">DEPTH 1 ACTIVE</span>
-          </div>
-          <div class="console-actions">
+          <div class="console-actions console-actions-clean">
             <a class="btn primary" href="#roadmap">Mine Map</a>
             <a class="btn" href="#community">Community</a>
             <a class="btn" href="#about">About $MINEOW</a>
@@ -2765,14 +2904,13 @@ body::after{
           <p class="muted">Completed phases are marked green; the deeper phases remain ahead.</p>
         </div>
         <div class="mine-levels">
-          <div class="glass mine-level done reveal"><div class="level-marker">✓</div><div class="level-copy"><small>PHASE 01 // COMPLETE</small><h3>Open the Mine</h3><p>Brand identity, website, logo, meme story and official channels.</p></div><div class="depth">0M</div></div>
-          <div class="glass mine-level done reveal"><div class="level-marker">✓</div><div class="level-copy"><small>PHASE 02 // COMPLETE</small><h3>Strike First Gold</h3><p>Token launch, official contract links, GMGN access and first community activity.</p></div><div class="depth">250M</div></div>
+          <div class="glass mine-level done reveal"><div class="level-marker">✓</div><div class="level-copy"><small>PHASE 01 // COMPLETE</small><h3>Open the Mine</h3><p>Brand identity, website, logo, meme story and official channels.</p></div></div>
+          <div class="glass mine-level done reveal"><div class="level-marker">✓</div><div class="level-copy"><small>PHASE 02 // COMPLETE</small><h3>Strike First Gold</h3><p>Token launch, official contract links, GMGN access and first community activity.</p></div></div>
           
           <div class="glass mine-level phase3-roadmap reveal">
             <div class="phase3-roadmap-head">
               <div class="level-marker">03</div>
               <div class="level-copy"><small>PHASE 03 // ACTIVE BUILD</small><h3>Community Tunnel</h3><p>The mine is opening one sealed depth at a time.</p></div>
-              <div class="depth">500M</div>
             </div>
 
             <div class="p3r-shell">
@@ -2935,12 +3073,6 @@ body::after{
                 </div>
               </div>
 
-              <div class="p3r-stats">
-                <div class="p3r-stat green"><span class="p3r-stat-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="4.5"/><path d="M32 20c6 0 11 5 11 11M32 14c10 0 18 8 18 18M32 26c3 0 6 3 6 6M20 45c3-6 7-9 12-9s9 3 12 9"/></svg></span><div><small>STATUS</small><strong>Signal detected</strong><em>Depth 1 active</em></div></div>
-                <div class="p3r-stat"><span class="p3r-stat-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 18c10-6 22-6 32 0"/><path d="M20 20l24 24"/><path d="M44 20L20 44"/></svg></span><div><small>DEPTH</small><strong>120m underground</strong><em>Echoing ahead</em></div></div>
-                <div class="p3r-stat"><span class="p3r-stat-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="18" cy="20" r="5"/><circle cx="31" cy="14" r="5"/><circle cx="45" cy="20" r="5"/><circle cx="15" cy="34" r="4.5"/><path d="M32 28c-9 0-16 8-14 16 2 8 10 6 14 3 3 3 12 5 14-3 2-8-5-16-14-16z"/></svg></span><div><small>NEXT STEP</small><strong>Unlock Depth 2</strong><em>Follow the signal</em></div></div>
-              </div>
-
               <div id="mineow-depth-modules" class="mineow-depth-modules" aria-live="polite"></div>
 
               <div class="p3r-build">
@@ -2959,8 +3091,8 @@ body::after{
               </div>
             </div>
           </div>
-          <div class="glass mine-level reveal"><div class="level-marker">04</div><div class="level-copy"><small>PHASE 04 // DEEPER</small><h3>Expansion Shaft</h3><p>Broader visibility, project partnerships and community-led campaigns.</p></div><div class="depth">750M</div></div>
-          <div class="glass mine-level reveal"><div class="level-marker">05</div><div class="level-copy"><small>PHASE 05 // LEGENDARY</small><h3>The Gold Chamber</h3><p>Long-term Miner Cat universe, new community ideas and brand extensions.</p></div><div class="depth">1000M</div></div>
+          <div class="glass mine-level reveal"><div class="level-marker">04</div><div class="level-copy"><small>PHASE 04 // DEEPER</small><h3>Expansion Shaft</h3><p>Broader visibility, project partnerships and community-led campaigns.</p></div></div>
+          <div class="glass mine-level reveal"><div class="level-marker">05</div><div class="level-copy"><small>PHASE 05 // LEGENDARY</small><h3>The Gold Chamber</h3><p>Long-term Miner Cat universe, new community ideas and brand extensions.</p></div></div>
         </div>
       </div>
     </section>
@@ -3121,21 +3253,21 @@ async function copyContract(btn) {
       el.classList.remove('current','depth-unlocked');
       node?.classList.remove('current');
 
-      // Depths already passed display an opened vault. Future depths stay sealed.
-      if(n < currentDepth){
+      // Every unlocked depth keeps Miner Cat visible as a permanent journey marker.
+      // Future depths remain sealed with the vault/lock icon.
+      if(n <= currentDepth){
         el.classList.add('depth-unlocked');
-        if(node && !node.querySelector('.p3-vault-svg') && lockTemplate){
-          node.innerHTML=lockTemplate+numBadge(n);
+        if(node){
+          node.innerHTML='<div class="p3r-cat"></div>'+numBadge(n);
         }
+      }else if(node && lockTemplate){
+        node.innerHTML=lockTemplate+numBadge(n);
       }
 
-      // Current depth carries Miner Cat.
+      // Only the newest unlocked depth is marked as the current location.
       if(n===currentDepth){
         el.classList.add('current');
         node?.classList.add('current');
-        if(node && !node.querySelector('.p3r-cat')){
-          node.innerHTML='<div class="p3r-cat"></div>'+numBadge(n);
-        }
       }
     });
 
