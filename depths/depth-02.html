@@ -8,7 +8,7 @@
 <body style="margin:0;background:#050403">
 <main class="mineow-depth2" data-mineow-depth="2">
 <style>
-.mineow-depth2{--d2bg:#050403;--d2gold:#f1b63a;--d2gold2:#ffd36a;--d2green:#2be98f;--d2text:#f6f0e7;--d2line:rgba(241,182,58,.32);box-sizing:border-box;width:min(1080px,94vw);margin:0 auto;padding:24px 0 56px;color:var(--d2text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.mineow-depth2{--d2bg:#050403;--d2gold:#f1b63a;--d2gold2:#ffd36a;--d2green:#2be98f;--d2text:#f6f0e7;--d2line:rgba(241,182,58,.32);box-sizing:border-box;width:100%;max-width:1080px;min-width:0;margin:0 auto;padding:24px 0 56px;color:var(--d2text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
 .mineow-depth2 *{box-sizing:border-box}
 .mineow-depth2 .d2-unlock{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;border:1px solid rgba(43,233,143,.5);background:rgba(43,233,143,.08);color:#70f3b1;font-weight:950;font-size:.82rem;letter-spacing:.08em}
 .mineow-depth2 .d2-dot{width:10px;height:10px;border-radius:50%;background:var(--d2green);box-shadow:0 0 10px rgba(43,233,143,.75)}
@@ -44,21 +44,38 @@
 .mineow-depth2 .d2-url{display:block;margin-top:5px;color:#6a4a13;font-weight:750;font-size:.72rem;letter-spacing:.01em}
 .mineow-depth2 .d2-depth3{display:inline-block;margin-top:12px;padding-top:15px;border-top:1px solid rgba(241,182,58,.18);color:var(--d2gold2);font-size:.98rem;font-weight:950;letter-spacing:.05em}
 @media(max-width:760px){
-.mineow-depth2{width:95vw;padding-top:18px}
-.mineow-depth2 .d2-title{font-size:29px;line-height:1;letter-spacing:-.035em}
+.mineow-depth2{width:100%;max-width:100%;min-width:0;padding-top:18px;overflow-x:hidden}
+.mineow-depth2 .d2-title{font-size:29px!important;line-height:1!important;letter-spacing:-.035em!important;max-width:100%;min-width:0}
 .mineow-depth2 .d2-title span{display:block}
 .mineow-depth2 .d2-card{border-radius:22px}
 .mineow-depth2 .d2-card+.d2-card{margin-top:18px}
 .mineow-depth2 .d2-copy{padding:22px 18px 26px}
 .mineow-depth2 .d2-split{grid-template-columns:1fr}
-.mineow-depth2 .d2-splitcopy{padding:24px 18px}
+.mineow-depth2 .d2-splitcopy{padding:44px 18px 28px;justify-content:flex-start}
 .mineow-depth2 .d2-visual{min-height:280px}
 .mineow-depth2 .d2-discovery .d2-splitcopy{order:1}
 .mineow-depth2 .d2-discovery .d2-visual{order:2;background-position:center}
 .mineow-depth2 .d2-teaser .d2-splitcopy{order:1}
-.mineow-depth2 .d2-teaser .d2-visual{order:2;background-position:36% center}
+.mineow-depth2 .d2-teaser .d2-visual{order:2;background-position:center}
 .mineow-depth2 .d2-telegram{width:100%;padding:11px 13px}
-.mineow-depth2 .d2-main{font-size:.92rem}
+.mineow-depth2 .d2-main{font-size:.92rem;white-space:normal;overflow-wrap:anywhere}
+}
+
+/* MINEOW mobile header safety: keeps the fixed site header visually separate from Depth 2 */
+@media(max-width:760px){
+  html{scroll-padding-top:96px}
+  .mineow-depth2{scroll-margin-top:96px}
+  body > header,
+  body > .site-header,
+  body > .topbar,
+  body > .navbar,
+  body > [class*="site-header"],
+  body > [class*="topbar"]{
+    background:rgba(5,4,3,.985)!important;
+    -webkit-backdrop-filter:blur(12px);
+    backdrop-filter:blur(12px);
+    box-shadow:0 1px 0 rgba(241,182,58,.28),0 8px 24px rgba(0,0,0,.36);
+  }
 }
 </style>
 <div class="d2-unlock"><span class="d2-dot"></span>DEPTH 2 UNLOCKED</div>
