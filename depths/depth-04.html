@@ -32,12 +32,25 @@ linear-gradient(90deg,rgba(2,3,4,.94) 0%,rgba(2,3,4,.74) 42%,rgba(2,3,4,.30) 100
 .d4 .d4-art:before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(255,196,65,.32),rgba(255,196,65,0) 68%)}
 .d4 .d4-gate{position:absolute;inset:4%;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 10px 28px rgba(0,0,0,.65))}
 .d4 .d4-cat{position:absolute;right:-6%;bottom:-4%;width:52%;height:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.7))}
+.d4 .d4-sealed{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:stretch;margin-top:14px;border:1px solid rgba(80,155,240,.42);border-radius:14px;overflow:hidden;background:#03060b;box-shadow:inset 0 0 42px rgba(50,105,170,.10)}
+.d4 .d4-sealed-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:26px 24px 26px 30px}
+.d4 .d4-sealed-title{margin:0 0 10px;padding:0;font:900 clamp(28px,3vw,42px)/.96 Georgia,serif;color:#63a8ef;letter-spacing:-.01em;text-transform:none}
+.d4 .d4-sealed-text{margin:0;max-width:330px;color:#d7e4f4;font-size:.92rem;line-height:1.5}
+.d4 .d4-coming{display:inline-flex;margin-top:14px;padding:8px 12px;border:1px solid rgba(79,160,244,.62);border-radius:8px;color:#66b4ff;background:rgba(4,17,31,.28);font-size:.8rem;font-weight:900;letter-spacing:.04em;line-height:1;cursor:default;user-select:none}
+/* Same approved artwork as the old Depth 3 sealed card: the door/chains/lanterns region of approved_depth3_master.png (x335-915, y1336-1648), no text. */
+.d4 .d4-sealed-art{position:relative;align-self:center;width:100%;aspect-ratio:580/312;background-image:url("/depths/assets/approved_depth3_master.png?v=8");background-repeat:no-repeat;background-size:162.24% auto;background-position:92.80% 98.24%}
+.d4 .d4-sealed-art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#03060b 0%,rgba(3,6,11,.55) 14%,rgba(3,6,11,0) 34%),radial-gradient(circle at 52% 50%,rgba(72,145,236,.16),transparent 42%)}
 @media (max-width:900px){
  .d4 .d4-shell{padding:0 18px}
  .d4 .d4-card{grid-template-columns:1fr;gap:6px;min-height:0;padding:22px 20px 24px;background:
  linear-gradient(180deg,rgba(2,3,4,.30) 0%,rgba(2,3,4,.70) 40%,rgba(2,3,4,.95) 100%),url("/depth4/art/bg_far.webp") center top/cover no-repeat,#080706}
  .d4 .d4-art{order:-1;width:min(260px,74%)}
  .d4 .d4-title{font-size:clamp(36px,10vw,52px)}
+ .d4 .d4-sealed{grid-template-columns:1fr}
+ .d4 .d4-sealed-art{order:-1}
+ .d4 .d4-sealed-art:before{background:linear-gradient(180deg,rgba(3,6,11,0) 62%,#03060b 100%),radial-gradient(circle at 52% 50%,rgba(72,145,236,.16),transparent 42%)}
+ .d4 .d4-sealed-copy{padding:4px 20px 22px}
+ .d4 .d4-sealed-title{font-size:clamp(28px,8vw,38px)}
 }
 @media (max-width:560px){
  .d4 .d4-kicker{font-size:.9rem;letter-spacing:.16em}
@@ -62,6 +75,14 @@ linear-gradient(90deg,rgba(2,3,4,.94) 0%,rgba(2,3,4,.74) 42%,rgba(2,3,4,.30) 100
       <img class="d4-gate" src="/depth4/art/gate_door.webp" alt="The Genesis Gate" loading="lazy" decoding="async">
       <img class="d4-cat" src="/depth4/art/poses/idle.webp" alt="Miner Cat with pickaxe" loading="lazy" decoding="async">
     </a>
+  </article>
+  <article class="d4-sealed" aria-label="Depth 5 remains sealed">
+    <div class="d4-sealed-copy">
+      <h3 class="d4-sealed-title">DEPTH 5<br>REMAINS SEALED</h3>
+      <p class="d4-sealed-text">The next passage is bound by ancient seals and unknown forces. Its secrets will be revealed when the time is right.</p>
+      <span class="d4-coming">COMING SOON</span>
+    </div>
+    <div class="d4-sealed-art" role="img" aria-label="Sealed vault door bound by chains, with blue lanterns"></div>
   </article>
 </div>
 </section>

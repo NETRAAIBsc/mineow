@@ -602,6 +602,16 @@ linear-gradient(90deg,rgba(2,5,8,.93),rgba(2,5,8,.43) 45%,rgba(2,5,8,.10)),url("
   }
 }
 
+/* Depth 4 is open: hide the bottom 344px (sealed-Depth-4 card) of the 941x1672 approved master.
+   The image box is shortened by 344/941 of its width (negative margin, % of width) and clipped.
+   Hit areas keep their exact previous pixel positions: the lost height is added back with
+   margin-top / padding-bottom, which are also % of width. */
+.d3-approved-master > img{margin-bottom:-36.5569%;clip-path:inset(0 0 20.5742% 0)}
+.d3-master-hit{box-sizing:content-box}
+.d3-master-game{margin-top:9.8704%;padding-bottom:1.9010%}
+.d3-master-door1{margin-top:18.8268%;padding-bottom:1.8278%}
+.d3-master-door2{margin-top:26.7962%;padding-bottom:1.8278%}
+
 
 
 /* =========================================================
@@ -821,13 +831,6 @@ linear-gradient(90deg,rgba(2,5,8,.93),rgba(2,5,8,.43) 45%,rgba(2,5,8,.10)),url("
     </article>
   </div>
 
-  <article class="d3-sealed">
-    <div class="d3-sealed-copy">
-      <h2>DEPTH 4<br>REMAINS SEALED</h2>
-      <p>The final passage is bound by ancient seals and unknown forces. Its secrets will be revealed when the time is right.</p>
-      <span class="d3-coming">COMING SOON</span>
-    </div>
-  </article>
 </section>
 
 <section class="d3-mobile-approved" aria-label="Depth 3 approved mobile layout">
@@ -848,9 +851,6 @@ linear-gradient(90deg,rgba(2,5,8,.93),rgba(2,5,8,.43) 45%,rgba(2,5,8,.10)),url("
     <a class="d3-mobile-hit d3-mobile-door2" href="#tour-artifact" data-open-room="artifact" aria-label="Explore Door 2" onclick="event.preventDefault();var t=document.getElementById('tour-artifact');if(t){var i=t.querySelector('[data-room-stage] img');if(i){i.dataset.zoom='1';i.dataset.x='0';i.dataset.y='0';i.style.setProperty('--zoom','1');i.style.setProperty('--pan-x','0px');i.style.setProperty('--pan-y','0px')}var d=t.querySelector('.d3-collection-drawer');if(d)d.classList.remove('open');var b=t.querySelector('[data-open-drawer]');if(b)b.style.display='';document.body.appendChild(t);t.classList.add('open');document.documentElement.style.overflow='hidden';document.body.style.overflow='hidden'}"></a>
   </div>
 
-  <div class="d3-mobile-piece">
-    <img src="/depths/assets/approved_depth4_mobile.jpg" alt="Depth 4 remains sealed">
-  </div>
 </section>
 
 </div>
