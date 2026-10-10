@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0604" />
+  <title>MINEOW · DEPTH 4 – THE GENESIS VAULT</title>
+  <link rel="icon" href="art/coin.webp" />
+  <script type="module" crossorigin src="./assets/index-D9ri-rkL.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cy4_971s.css">
+</head>
+<body>
+  <div id="app">
+    <div id="stage">
+      <div id="gl"></div>
+      <div id="hud" class="hidden">
+        <div class="top">
+          <button id="back" class="round" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="plaque" id="plq1"><div class="in"><svg class="paw" viewBox="0 0 64 64"><g fill="currentColor"><ellipse cx="32" cy="42" rx="15" ry="12"/><ellipse cx="14" cy="28" rx="6" ry="8" transform="rotate(-20 14 28)"/><ellipse cx="25" cy="17" rx="6" ry="8"/><ellipse cx="39" cy="17" rx="6" ry="8"/><ellipse cx="50" cy="28" rx="6" ry="8" transform="rotate(20 50 28)"/></g></svg><div><b>MINEOW</b><small>GENESIS VAULT</small></div></div></div>
+          <div class="plaque" id="plq2"><div class="in"><div><b id="phaseT">PHASE 1</b><small id="phaseS">REACH THE SEALED GATE</small></div></div></div>
+        </div>
+        <div id="prompt"></div>
+        <div class="bottom">
+          <div id="dots"><i></i><i></i><i></i><i></i></div>
+          <button id="btnLeft" class="walk" aria-label="Walk left"><svg viewBox="0 0 24 24"><path d="M16 4 7 12l9 8z" fill="currentColor"/></svg></button>
+          <button id="btnRight" class="walk" aria-label="Walk right"><svg viewBox="0 0 24 24"><path d="M8 4l9 8-9 8z" fill="currentColor"/></svg></button>
+          <button id="smash" class="disabled" aria-label="Smash gate">
+            <span class="gem l"></span><span class="gem r"></span>
+            <span class="icon"><svg viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M14 52 44 18"/><path d="M50 52 20 18"/></g><g fill="currentColor"><path d="M30 12c8-6 20-4 26 6-8-4-16-4-22 0z"/><path d="M34 12c-8-6-20-4-26 6 8-4 16-4 22 0z"/></g></svg></span>
+            <span class="txt"><b>SMASH GATE</b><small><em></em><span id="hitTxt">HIT 0 / 4</span><em></em></small></span>
+          </button>
+          <button id="sound" class="round" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="w" d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5M18.5 6c2 1.6 3 3.6 3 6s-1 4.4-3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+      </div>
+      <div id="loading"><img src="art/coin.webp" alt="" /><div class="bar"><i></i></div><p>DESCENDING TO DEPTH 4…</p></div>
+      <div id="title" class="hidden">
+        <img class="coin" src="art/coin.webp" alt="MINER CAT $MINEOW" />
+        <h2>MINEOW</h2>
+        <h1>DEPTH 4</h1>
+        <h3>THE GENESIS VAULT</h3>
+        <button id="start" class="goldbtn">TAP TO ENTER</button>
+        <p class="hint">◀ ▶ / A D — walk &nbsp;·&nbsp; SPACE / J — smash</p>
+      </div>
+      <div id="end" class="hidden">
+        <p class="pre">DEPTH 4 · THE VAULT IS OPEN</p>
+        <h1>GENESIS<br/>MACHINE</h1>
+        <p class="sub">SLICE B — COMING SOON</p>
+        <button id="replay" class="goldbtn">↻ REPLAY</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

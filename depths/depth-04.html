@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MINEOW — Depth 4 | The Genesis Vault</title>
+</head>
+<body>
+<section class="d4" data-mineow-depth="4" id="depth4" aria-label="MINEOW Depth 4 — The Genesis Vault">
+<style>
+/* MINEOW D4 module: every rule is scoped under .d4 so the host page is not affected. No scripts required. */
+.d4{--gold:#d79b29;--gold2:#ffd36a;--line:rgba(215,155,41,.42);width:100%;max-width:100%;min-width:0;margin:0!important;box-sizing:border-box;color:#efe6d6;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#030405;padding:0 0 28px}
+.d4 *{box-sizing:border-box}
+.d4 .d4-shell{width:min(1420px,100%);margin:0 auto;padding:0 5.5%}
+.d4 .d4-card{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:24px;min-height:440px;padding:40px 44px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:
+linear-gradient(90deg,rgba(2,3,4,.94) 0%,rgba(2,3,4,.74) 42%,rgba(2,3,4,.30) 100%),url("/depth4/art/bg_far.webp") center/cover no-repeat,#080706;box-shadow:0 18px 50px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,214,110,.05)}
+.d4 .d4-copy{position:relative;z-index:2;min-width:0}
+.d4 .d4-unlocked{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;border:1px solid rgba(43,233,143,.50);background:rgba(43,233,143,.08);color:#70f3b1;font-size:.82rem;font-weight:950;letter-spacing:.08em;line-height:1}
+.d4 .d4-unlocked:before{content:"●";font-size:12px;text-shadow:0 0 10px rgba(43,233,143,.75)}
+.d4 .d4-kicker{display:block;margin:18px 0 6px;color:#d5a348;font:800 1rem/1 Georgia,serif;letter-spacing:.23em}
+.d4 .d4-title{margin:0 0 14px;padding:0;font:900 clamp(40px,5vw,76px)/.95 Georgia,serif;color:#e6ad3a;letter-spacing:-.02em;text-shadow:0 3px 16px rgba(0,0,0,.55);text-transform:none}
+.d4 .d4-text{max-width:480px;margin:0;color:#f2ece2;line-height:1.62;font-size:1.04rem}
+.d4 .d4-text b{color:#ffd36a;font-weight:800}
+.d4 .d4-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.d4 .d4-btn{border:0;border-radius:10px;padding:15px 22px;font-weight:950;font-size:1rem;line-height:1.2;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-align:center;min-height:50px}
+.d4 .d4-btn.gold{background:linear-gradient(#ffd773,#cf8b14);color:#181005;box-shadow:inset 0 0 0 1px rgba(255,242,190,.5),0 8px 26px rgba(215,155,41,.30)}
+.d4 .d4-btn.gold:hover{filter:brightness(1.07)}
+.d4 .d4-btn.gold:focus-visible{outline:2px solid #ffe28b;outline-offset:3px}
+.d4 .d4-btn .d4-play{display:inline-block;width:0;height:0;border-left:11px solid #181005;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.d4 .d4-meta{margin:12px 0 0;color:#bfae8e;font-size:.84rem;letter-spacing:.04em}
+.d4 .d4-art{position:relative;z-index:1;display:block;justify-self:center;width:min(380px,100%);aspect-ratio:1/1;text-decoration:none}
+.d4 .d4-art:before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(255,196,65,.32),rgba(255,196,65,0) 68%)}
+.d4 .d4-gate{position:absolute;inset:4%;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 10px 28px rgba(0,0,0,.65))}
+.d4 .d4-cat{position:absolute;right:-6%;bottom:-4%;width:52%;height:auto;filter:drop-shadow(0 8px 18px rgba(0,0,0,.7))}
+@media (max-width:900px){
+ .d4 .d4-shell{padding:0 18px}
+ .d4 .d4-card{grid-template-columns:1fr;gap:6px;min-height:0;padding:22px 20px 24px;background:
+ linear-gradient(180deg,rgba(2,3,4,.30) 0%,rgba(2,3,4,.70) 40%,rgba(2,3,4,.95) 100%),url("/depth4/art/bg_far.webp") center top/cover no-repeat,#080706}
+ .d4 .d4-art{order:-1;width:min(260px,74%)}
+ .d4 .d4-title{font-size:clamp(36px,10vw,52px)}
+}
+@media (max-width:560px){
+ .d4 .d4-kicker{font-size:.9rem;letter-spacing:.16em}
+ .d4 .d4-text{font-size:.98rem}
+ .d4 .d4-actions{flex-direction:column;align-items:stretch}
+ .d4 .d4-btn{width:100%}
+}
+</style>
+<div class="d4-shell">
+  <article class="d4-card">
+    <div class="d4-copy">
+      <div class="d4-unlocked">DEPTH 4 UNLOCKED</div>
+      <span class="d4-kicker">DEPTH 4 – THE GENESIS VAULT</span>
+      <h2 class="d4-title">THE GENESIS<br>VAULT</h2>
+      <p class="d4-text">The Miner Cat must break the <b>Genesis Gate in 4 hits</b>. Beyond it, the Genesis Machine awakens and reveals <b>one of the 12 Genesis NFTs</b>.</p>
+      <div class="d4-actions">
+        <a class="d4-btn gold" href="/depth4/" data-enter-game><span class="d4-play" aria-hidden="true"></span>Play Depth 4 – The Genesis Vault</a>
+      </div>
+      <p class="d4-meta">Mobile-first · Portrait 9:16 · No wallet needed</p>
+    </div>
+    <a class="d4-art" href="/depth4/" aria-label="Play Depth 4 – The Genesis Vault" tabindex="-1">
+      <img class="d4-gate" src="/depth4/art/gate_door.webp" alt="The Genesis Gate" loading="lazy" decoding="async">
+      <img class="d4-cat" src="/depth4/art/poses/idle.webp" alt="Miner Cat with pickaxe" loading="lazy" decoding="async">
+    </a>
+  </article>
+</div>
+</section>
+</body>
+</html>
