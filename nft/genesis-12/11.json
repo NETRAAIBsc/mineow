@@ -1,0 +1,49 @@
+{
+  "name": "Genesis #12 Treasure Seeker",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis #12 — Treasure Seeker. Found the treasure chest and its blood-red ruby at the bottom of the vault. One of 12 hand-picked Miner Cats in the MINEOW Genesis 12 collection from Meow Mining Co.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "attributes": [
+    {
+      "trait_type": "Title",
+      "value": "Treasure Seeker"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "MINEOW Genesis 12"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Treasure Seeker"
+    },
+    {
+      "trait_type": "Genesis Trait",
+      "value": "Ruby and chest"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "12 of 12"
+    }
+  ],
+  "image": "https://mineow.space/nft/genesis-12/11.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/11.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}

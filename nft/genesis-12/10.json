@@ -1,0 +1,49 @@
+{
+  "name": "Genesis #11 Ancient Relic",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis #11 — Ancient Relic. Unearthed the glowing paw tablet, the oldest relic of the mine. One of 12 hand-picked Miner Cats in the MINEOW Genesis 12 collection from Meow Mining Co.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "attributes": [
+    {
+      "trait_type": "Title",
+      "value": "Ancient Relic"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "MINEOW Genesis 12"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Relic Keeper"
+    },
+    {
+      "trait_type": "Genesis Trait",
+      "value": "Golden paw tablet"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "11 of 12"
+    }
+  ],
+  "image": "https://mineow.space/nft/genesis-12/10.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/10.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}

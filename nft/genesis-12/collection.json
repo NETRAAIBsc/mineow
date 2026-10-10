@@ -1,0 +1,23 @@
+{
+  "name": "MINEOW Genesis 12",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis 12: twelve hand-picked 1/1 Miner Cats from Meow Mining Co., the first cats to break into the Genesis Vault (Depth 4 of the MINEOW Living Mine). Play: https://mineow.space/depth4/",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "image": "https://mineow.space/nft/genesis-12/collection.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/collection.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}

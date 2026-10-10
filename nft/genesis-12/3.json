@@ -1,0 +1,49 @@
+{
+  "name": "Genesis #04 The Gatekeeper",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis #04 — The Gatekeeper. Guards the great bronze door of the Genesis Vault. One of 12 hand-picked Miner Cats in the MINEOW Genesis 12 collection from Meow Mining Co.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "attributes": [
+    {
+      "trait_type": "Title",
+      "value": "The Gatekeeper"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "MINEOW Genesis 12"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Gatekeeper"
+    },
+    {
+      "trait_type": "Genesis Trait",
+      "value": "Vault door"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "4 of 12"
+    }
+  ],
+  "image": "https://mineow.space/nft/genesis-12/3.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/3.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}

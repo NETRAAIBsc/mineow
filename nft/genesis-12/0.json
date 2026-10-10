@@ -1,0 +1,49 @@
+{
+  "name": "Genesis #01 The First Miner",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis #01 — The First Miner. The first cat to break ground in the Genesis Vault. The face, helmet and gear of every Genesis miner follow this one. One of 12 hand-picked Miner Cats in the MINEOW Genesis 12 collection from Meow Mining Co.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "attributes": [
+    {
+      "trait_type": "Title",
+      "value": "The First Miner"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "MINEOW Genesis 12"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Pioneer"
+    },
+    {
+      "trait_type": "Genesis Trait",
+      "value": "The original pickaxe"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "1 of 12"
+    }
+  ],
+  "image": "https://mineow.space/nft/genesis-12/0.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/0.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}

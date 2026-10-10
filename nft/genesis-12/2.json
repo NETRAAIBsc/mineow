@@ -1,0 +1,49 @@
+{
+  "name": "Genesis #03 Deep Explorer",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis #03 — Deep Explorer. Descends where the tunnels turn blue and the rope runs out. One of 12 hand-picked Miner Cats in the MINEOW Genesis 12 collection from Meow Mining Co.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "attributes": [
+    {
+      "trait_type": "Title",
+      "value": "Deep Explorer"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "MINEOW Genesis 12"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Explorer"
+    },
+    {
+      "trait_type": "Genesis Trait",
+      "value": "Rope and headlamp"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "3 of 12"
+    }
+  ],
+  "image": "https://mineow.space/nft/genesis-12/2.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/2.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}

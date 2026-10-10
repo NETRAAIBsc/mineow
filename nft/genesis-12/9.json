@@ -1,0 +1,49 @@
+{
+  "name": "Genesis #10 Shadow Miner",
+  "symbol": "MINEOW",
+  "description": "MINEOW Genesis #10 — Shadow Miner. Works in silence through the deepest, darkest violet caves. One of 12 hand-picked Miner Cats in the MINEOW Genesis 12 collection from Meow Mining Co.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://mineow.space/depth4/",
+  "attributes": [
+    {
+      "trait_type": "Title",
+      "value": "Shadow Miner"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "MINEOW Genesis 12"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Shadow Miner"
+    },
+    {
+      "trait_type": "Genesis Trait",
+      "value": "Amethyst dark"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "10 of 12"
+    }
+  ],
+  "image": "https://mineow.space/nft/genesis-12/9.jpg",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://mineow.space/nft/genesis-12/9.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "uu3CMQsEr218yR1TjAXPrCZ6QuahEMG4Piyz7SzookQ",
+        "share": 100
+      }
+    ]
+  }
+}
