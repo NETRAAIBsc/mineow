@@ -2779,7 +2779,14 @@ body::after{
       <div class="nav-actions">
         <a class="mini buy" href="#buy">🔎 View</a>
         <a class="mini" href="https://discord.gg/shne48EUu" target="_blank" rel="noopener" aria-label="Discord">Discord</a>
-        <button class="mini contract-btn" type="button" onclick="copyContract(this)">Contract</button>
+        <details class="nav-menu" id="navMenu">
+          <summary class="mini nav-menu-btn" aria-label="Open Game and Ecosystem menu">Explore ▾</summary>
+          <div class="nav-menu-list" role="menu">
+            <!-- EDIT LINKS HERE: set href for Game / Ecosystem. Ecosystem has no public URL yet. -->
+            <a role="menuitem" href="/depth4/">🎮 Game<small>Depth 4 · The Genesis Vault</small></a>
+            <a role="menuitem" class="is-soon" href="#" aria-disabled="true" onclick="event.preventDefault()">⛏️ Ecosystem<small>Living Mine · Coming soon</small></a>
+          </div>
+        </details>
       </div>
     </div>
   </nav>
@@ -3320,5 +3327,18 @@ async function copyContract(btn) {
 })();
 </script>
 
+<style id="mineow-nav-menu-style">
+.nav-menu{position:relative}
+.nav-menu>summary{list-style:none;cursor:pointer;user-select:none}
+.nav-menu>summary::-webkit-details-marker{display:none}
+.nav-menu-list{position:absolute;right:0;top:calc(100% + 8px);z-index:9999;min-width:210px;padding:6px;border-radius:14px;border:1px solid rgba(255,205,92,.45);background:rgba(14,10,4,.97);box-shadow:0 14px 40px rgba(0,0,0,.6);display:flex;flex-direction:column;gap:4px}
+.nav-menu-list a{display:block;padding:10px 12px;border-radius:10px;color:#f8e3b2;font-weight:800;font-size:14px;text-decoration:none;line-height:1.25}
+.nav-menu-list a small{display:block;margin-top:2px;color:#9d8f68;font-size:11px;font-weight:600}
+.nav-menu-list a:hover{background:rgba(255,205,92,.12)}
+.nav-menu-list a.is-soon{opacity:.6;cursor:default}
+</style>
+<script>
+document.addEventListener('click',function(e){var m=document.getElementById('navMenu');if(m&&m.open&&!m.contains(e.target))m.open=false;});
+</script>
 </body>
 </html>
